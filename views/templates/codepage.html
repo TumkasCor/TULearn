@@ -1,0 +1,92 @@
+<script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='semantic.min.css') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='codemirror.css') }}">
+<script src="{{ url_for('static', filename='codemirror.js') }}"></script>
+<script src="{{ url_for('static', filename='autorefresh.js') }}"></script>
+<script src="/static/mode/xml/xml.js"></script>
+<script src="/static/mode/javascript/javascript.js"></script>
+<script src="/static/mode/css/css.js"></script>
+<script src="/static/mode/htmlmixed/htmlmixed.js"></script>
+<script src="/static/mode/htmlmixed/htmlmixed.js"></script>
+<script src="{{ url_for('static', filename='marked.js') }}"></script>
+
+<script src="{{ url_for('static', filename='semantic.min.js') }}"></script>
+<script src="{{ url_for('static', filename='codepage.js') }}"></script>
+<style>
+        .CodeMirror {  border: 1px solid #ddd; }
+        .CodeMirror-gutters { width: 30px;}
+        .CodeMirror-scroll { max-height: 600px; }
+        .CodeMirror pre { line-height: 1.25; }
+</style>
+
+{% block body %}
+
+<div class="ui sidebar inverted vertical menu" id="sidebar">
+    {% for x in data2 %}
+          <a href="/lesson/{{ x[0] }}" class="item">
+            Урок № {{ x[0] }}. {{ x[2] }}
+          </a>
+    {% endfor %}
+</div>
+<div class="ui fixed-height inverted stackable menu main" id="navbar" style="margin: 0;">
+        <div class="ui container">
+            <a class="item mobile-button ">
+                <i class="sidebar icon"></i>
+            </a>
+            <div class="item">
+                <b><a href="/" title="Домашняя страница">Домашняя страница</a></b>
+            </div>
+                <a class="item" href="{{ url_for('lessons') }}">Уроки</a>
+                <div class="ui dropdown item" tabindex="0">
+                    <span>Справка</span>
+                    <div class="menu" tabindex="-1">
+                        <a class="item" href="{{ url_for('faq') }}">FAQ?!</a>
+                    </div>
+                </div>          
+                <!-- <i class="red heart icon"> -->
+            </div>
+        </div>
+    </div>
+<div class="pusher" id="main1" style="padding-top: 10px; padding-bottom: 14px;">
+        <div class="ui centered grid">
+            <div class="center aligned column">
+                <div class="ui compact menu">
+                        <a class="item active" data-tab="lesson">Lesson</a>
+                        <a class="item" data-tab="code">Code</a>
+                        <a class="item" data-tab="visual" onclick="update()">Visual</a>
+                </div>        
+            </div>
+        </div>
+        <div class="ui tab active" data-tab="lesson" style="margin-top: 10px;">
+            <div id="lesson" class="ui container">
+                <div class="ui segment" id="lessontext">
+                    {{ data[1] }}
+                </div>
+            </div>
+        </div>
+        <div class="ui container segment tab" data-tab="code">
+            <div>
+                    <form style="position: relative; margin-top: .5em;"><textarea id=text>{{ data[3] }}</textarea>
+                    </form>               
+            </div>
+            <div>
+                <form style="position: relative; margin-top: .5em;"><textarea id=text2>{{ data[4] }}</textarea>
+                </form>               
+        </div>       
+        </div>
+        <div class="ui tab" data-tab="visual"> 
+            <iframe id="myIframe" style="width: 100%; height: 90%;" frameborder="0"></iframe>
+      </div>
+</div>
+<script>
+    $('#sidebar').first()
+        .sidebar('setting', {transition: 'push'})
+        .sidebar('attach events', '.mobile-button');
+</script>
+{% endblock %}
+
+
