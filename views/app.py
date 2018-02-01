@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template("index.html", title="Домашняя страница")
+    return render_template("index.html", title="Главня страница")
 
 @app.route("/lesson")
 def lessons():
@@ -25,6 +25,6 @@ def lesson(id):
 def error404():
     return render_template("404.html")
 
-@app.route('/faq')
-def faq():
-    return render_template("faq.html")
+@app.route('/support')
+def support():
+    return render_template("support.html")

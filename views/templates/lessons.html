@@ -2,9 +2,13 @@
 {% block body %}
 <div class="ui segment" style="margin-bottom: 10px;">
         <h4 style="margin: 0">Уроки которые доступны на нашем сайте:</h4></br>
-        {% for x in data %}
-            <p><a href="/lesson/{{ x[0] }}">Урок № {{ x[0] }}. {{ x[2].replace("#", "") }}</a> </p> 
-        {% endfor %}
-</div>
-
+        <h3 style="margin: 0">HTML:</h3></br>
+{% for x in data[:7] %}
+<p><a href="/lesson/{{ x[0] }}">Урок # {{ x[0] }}. {{ x[2].replace("#", "") }} </a></p>
+{% endfor %}
+<div class="ui divider"></div>
+<h3 style="margin: 0">CSS:</h3></br>
+{% for x in data[7:] %}
+<p><a href="/lesson/{{ x[0] }}">Урок # {{ x[0] }}. {{ x[2].replace("#", "") }} </a></p>
+{% endfor %}
 {% endblock %}

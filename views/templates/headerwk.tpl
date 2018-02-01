@@ -31,7 +31,7 @@
 			<div class="ui dropdown item" tabindex="0">
 				<span>Справка</span>
 				<div class="menu" tabindex="-1">
-					<a class="item" href="{{ url_for('faq') }}">FAQ?!</a>
+			       <a class="item" href="mailto:help@tumkascor.ru">Support</a>
 				</div>
 			</div>          
             <!-- <i class="red heart icon"> -->
@@ -46,7 +46,7 @@
 <footer>
         <div class="ui container">
         <div class="ui left">
-        © 2018 Developed by <a href="http://tumkascor.ru">Tumkas</a> and <a href="http://kotrik.ru">KotRik</a> with <i class="red heart icon"></i>
+        © 2018 Developed by <a href="http://tumkascor.ru">Tumkas</a> with <i class="red heart icon"></i>
         </div>
         </div>
         </footer>

@@ -1,0 +1,75 @@
+<html>
+<head>
+</head>
+<body>
+1.
+	<html>
+  <head>
+    <title>Подключение CSS к HTML</title>
+  </head>
+  <body>
+    <h1>Это заголовок первого уровня</h1>
+    Здесь просто текст
+    <h2>Это заголовок второго уровня</h2>
+    Здесь просто текст
+  </body>
+</html>
+
+
+2.
+	<html>
+  <head>
+    <title>Подключение CSS к HTML</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Это заголовок первого уровня</h1>
+    Здесь просто текст
+    <h2>Это заголовок второго уровня</h2>
+    Здесь просто текст
+  </body>
+</html>
+
+
+
+3.
+
+<html>
+  <head>
+    <title>Подключение CSS к HTML</title>
+
+    <style type="text/css">
+    h1{
+        color:red
+    }
+    </style>
+    
+  </head>
+  <body>
+    <h1>Этот заголовок будет красного цвета</h1>
+    <h1>Этот заголовок будет красного цвета</h1>
+    <h1>Этот заголовок будет красного цвета</h1>
+  </body>
+</html>
+	
+4.
+
+<html>
+  <head>
+    <title>Подключение CSS к HTML</title>
+
+    <style type="text/css">
+    h1{
+        color:red
+    }
+    </style>
+
+  </head>
+  <body>
+    <h1>Этот заголовок будет красного цвета</h1>
+    <h1 style="color:blue">Этот заголовок будет синего цвета</h1>
+    <h1>Этот заголовок будет красного цвета</h1>
+  </body>
+</html>
+</body>
+</html>

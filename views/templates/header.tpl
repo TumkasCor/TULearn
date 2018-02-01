@@ -32,10 +32,9 @@ body {
         </div>
             <a class="item" href="{{ url_for('lessons') }}">Уроки</a>
 			<div class="ui dropdown item" tabindex="0">
-				<span>Справка</span>
+				<span><a href="{{ url_for('support') }}">Помощь</a></span>
 				<div class="menu" tabindex="-1">
-					<a class="item" href="{{ url_for('faq') }}">FAQ?!</a>
-				</div>
+                </div>
 			</div>          
             <!-- <i class="red heart icon"> -->
 		</div>
@@ -49,7 +48,7 @@ body {
 <footer>
         <div class="ui container">
         <div class="ui left">
-        © 2018 Разработано <a href="http://tumkascor.ru">Tumkas</a></i>
+        © 2018 Разработано <a href="http://tumkascor.ru">TumkasCor</a> with <i class="red heart icon"></i>
         </div>
         </div>
         </footer>

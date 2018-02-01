@@ -9,9 +9,6 @@ class Storage:
 
     def add_data(self, number, name, lesson, code, style):
         self.data.append([number, name, lesson, code, style])
-
-    def sort(self):
-        self.data.sort()
     
     def get(self, numberlesson):
         index = -1
@@ -32,6 +29,7 @@ class Storage:
     def init_lessons(self):
 
         ss = os.listdir('lessons') # Получаем список уроков
+        ss.sort(key=int)
         for s in ss:
             s #number directory
             dss = os.listdir(f'lessons/{s}')
@@ -56,5 +54,4 @@ class Storage:
 
 
                 self.add_data(s, lessontemp, lessontemp.split('\n')[0], codetemp, styletemp)
-                self.sort()
                 print(f"[{s}] Loaded!")
