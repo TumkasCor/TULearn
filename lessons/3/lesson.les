@@ -1,157 +1,128 @@
-# An h1 header
-============
+## Форматирование текста
 
-Paragraphs are separated by a blank line.
+Для форматирования текста существует много тегов. Одни их них используются часто (и их вы быстро запомните), другие - редко (их и не надо запоминать).
 
-2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
-look like:
+Здесь мы рассмотрим те, которые используются часто.
 
-  * this one
-  * that one
-  * the other one
+# Теги, делающие текст заголовками
 
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
+ * <h1></h1>
+ * <h2></h2>
+ * <h3></h3>
+ * <h4></h4>
+ * <h5></h5>
+ * <h6></h6>
+ * Эти теги выделяют текст в виде заголовков. Т.е. каждый заголовок начинается с новой строки, выделен полужирным шрифтом и имеет свой размер (заголовок первого уровня самый большой, шестого - самый маленький).
 
-> Block quotes are
-> written like so.
->
-> They can span multiple paragraphs,
-> if you like.
+Эти теги могут использоваться с параметром горизонтального выравнивания align. Возможные значения этого параметра:
 
-Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
-in chapters 12--14"). Three dots ... will be converted to an ellipsis.
-Unicode is supported. ☺
+left - слева, 
 
+right - справа, 
 
+center - по центру,
 
-An h2 header
-------------
-
-Here's a numbered list:
-
- 1. first item
- 2. second item
- 3. third item
-
-Note again how the actual text starts at 4 columns in (4 characters
-from the left side). Here's a code sample:
-
-    # Let me re-iterate ...
-    for i in 1 .. 10 { do-something(i) }
-
-As you probably guessed, indented 4 spaces. By the way, instead of
-indenting the block, you can use delimited blocks, if you like:
-
-~~~
-define foobar() {
-    print "Welcome to flavor country!";
-}
-~~~
-
-(which makes copying & pasting easier). You can optionally mark the
-delimited block for Pandoc to syntax highlight it:
-
-~~~python
-import time
-# Quick, count to ten!
-for i in range(10):
-    # (but not *too* quick)
-    time.sleep(0.5)
-    print i
-~~~
+jastify - по ширине.
 
 
+# Теги разделения на абзацы и переноса строки
 
-### An h3 header ###
+Тег <br> - тег принудительного перевода строки. Текст, после этого тега начинается с новой строки.
+Теги <p></p> разделяют текст на абзацы. Перед началом каждого абзаца следует поместить тег <p>, закрывающий тег не обязателен. В отличии от тега <br> абзацы отделяются друг от друга пустой строкой.
 
-Now a nested list:
+У тега <p> есть параметр align, который задает способ выравнивания текста внутри параграфа. Возможные значения этого параметра:
 
- 1. First, get these ingredients:
+left - слева, 
 
-      * carrots
-      * celery
-      * lentils
+right - справа, 
 
- 2. Boil some water.
+center - по центру,
 
- 3. Dump everything in the pot and follow
-    this algorithm:
+jastify - по ширине.
 
-        find wooden spoon
-        uncover pot
-        stir
-        cover pot
-        balance wooden spoon precariously on pot handle
-        wait 10 minutes
-        goto first step (or shut off burner when done)
 
-    Do not bump wooden spoon or it will fall.
+# Теги, выделяющие текст курсивом
 
-Notice again how text always lines up on 4-space indents (including
-that last line which continues item 3 above).
+ * <cite></cite>
+ * <dfn></dfn>
+ * <em></em>
+ * <i></i>
+ * Эти теги выделяют текст курсивом, но делают они это по разным причинам. 
+ * Теги <cite></cite> используются для логического выделения названий книг, статей и цитат.
+ * Теги <dfn></dfn> используются для выделения определений.
+ * Тегами <em></em> и <i></i> выделяют важные фрагменты текста. Последний не рекомендуется к употреблению.
 
-Here's a link to [a website](http://foo.bar), to a [local
-doc](local-doc.html), and to a [section heading in the current
-doc](#an-h2-header). Here's a footnote [^1].
+# Теги, выделяющие текст полужирным шрифтом
 
-[^1]: Footnote text goes here.
+ * <strong></strong>
+ * <b></b>
+ * Оба используются для выделения важных фрагментов текста, но предпочтительнее использовать первый.
 
-Tables can look like this:
 
-size  material      color
-----  ------------  ------------
-9     leather       brown
-10    hemp canvas   natural
-11    glass         transparent
+# Теги, выделяющие текст подчеркиванием
 
-Table: Shoes, their sizes, and what they're made of
+ * <ins></ins>
+ * <u></u>
+ * Оба используются для подчеркивания важных фрагментов текста, но предпочтительнее использовать первый.
 
-(The above is the caption for the table.) Pandoc also supports
-multi-line tables:
 
---------  -----------------------
-keyword   text
---------  -----------------------
-red       Sunsets, apples, and
-          other red or reddish
-          things.
+# Теги, выводящие текст моноширинным шрифтом
 
-green     Leaves, grass, frogs
-          and other things it's
-          not easy being.
---------  -----------------------
+ * <kbd></kbd>
+ * <samp></samp>
+ * <tt></tt>
+ * Выводят текст моноширинным шрифтом, но предпочтительнее использовать первый.
 
-A horizontal rule follows.
 
-***
+# Теги, выводящие текст в верхнем и нижнем индексах
 
-Here's a definition list:
+Теги <sub></sub> выводят текст ниже уровня строки шрифтом меньшего размера. 
+Теги <sup></sup> выводят текст выше уровня строки шрифтом меньшего размера.
+Удобны для вывода математических и химических формул.
 
-apples
-  : Good for making applesauce.
-oranges
-  : Citrus!
-tomatoes
-  : There's no "e" in tomatoe.
+# Тег font и его параметры
 
-Again, text is indented 4 spaces. (Put a blank line between each
-term/definition pair to spread things out more.)
+Теги <font></font> указывают параметры шрифта текста:
 
-Here's a "line block":
+face - название шрифта. Названий шрифтов можно привести несколько, через запятую. В этом случае, если первый указанный шрифт не будет найден (вы же не знаете, какие шрифты установлены на компьютере пользователя), браузер станет использовать следующий по списку.
 
-| Line one
-|   Line too
-| Line tree
+size - размер шрифта в условных единицах от 1 до 7. По умолчанию размер шрифта равен 3. 
 
-and images can be specified like so:
+color - цвет текста (по умолчанию - черный). 
 
-![example image](example-image.jpg "An exemplary image")
+Существуют два способа задания цвета: по имени и указанием шестнадцатеричного кода цвета.
 
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
+С именными цветами (их 156) все просто, смотрим в соответствующую таблицу, выбираем понравившийся цвет и пишем его имя в значение параметра (например, color="blue").
 
-$$I = \int \rho R^{2} dV$$
+Но гораздо больший выбор предоставляет второй способ. Здесь мы можем выбирать из миллиона цветов, указав его шестнадцатеричный код. Этот код представляет собой 6 цифр и начинается с символа "#". Не будем вдаваться в подробности, как формируется код цвета, укажем лишь на то, что получить его можно, например, в программе Photoshop. О том, как это делать читайте на странице Цвета для web.
 
-And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
+
+# Тег center
+
+Теги <center></center> предназначен для выравнивания всех элементов внутри него по центру окна браузера.
+
+
+# Совместное использование тегов
+
+Мы рассмотрели основные теги форматирования текста, но что если вам необходимо сделать какое-нибудь слово в тексте жирным красным курсивом? Для этого вам придется применить теги strong, font и em вместе. Здесь главное соблюдать порядок вложенности тегов. Тег, который открыт первым, должен быть закрыт последним.
+
+Понятнее будет на примере:
+
+Выделим слово "текст" красным цветом:
+
+<font color="red">Текст</font>
+     
+
+Теперь добавим теги курсива (открывающий - слева, закрывающий - справа):
+
+<em><font color="red">Текст</font></em>
+     
+
+А теперь - теги полужирного начертания:
+
+<strong><em><font color="red">Текст</font></em></strong>
+     
+
+Каждый раз все предыдущие теги мы помещаем в новые. Это и называется порядком вложенности. Вы можете использовать разные теги для оформления текста, главное не нарушать порядок вложенности.
+
+На этом третий урок закончен, мы рассмотрели основные способы оформления текста, на следующем уроке мы рассмотрим менее применимые теги форматирования. Тем не менее, ознакомиться с ними будет не лишним.

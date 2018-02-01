@@ -32,7 +32,7 @@ $( document ).ready(() => {
             ifrm.document.close();
         } );
 
-    document.getElementById('lessontext').innerHTML = marked(document.getElementById('lessontext').innerHTML);
+    document.getElementById('lessontext').innerHTML = marked(document.getElementById('lessontext').innerHTML.replace("                    ", ""));
 
     update = () => {
         ifrm.document.write(editor.getValue() + "<style>"+editor2.getValue()+"<style>");

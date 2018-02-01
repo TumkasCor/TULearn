@@ -28,7 +28,7 @@
 <div class="ui sidebar inverted vertical menu" id="sidebar">
     {% for x in data2 %}
           <a href="/lesson/{{ x[0] }}" class="item">
-            Урок № {{ x[0] }}. {{ x[2] }}
+            Урок № {{ x[0] }}. {{ x[2].replace("#", "") }}
           </a>
     {% endfor %}
 </div>

@@ -1,0 +1,234 @@
+<html>
+<head>
+</head>
+<body>
+1.
+	 <form name="forma1">
+
+     <input type="text" name="text1" size="20"
+            maxlength="50" value="Введите текст">
+<br>
+2.   
+<form name="forma135613561">
+
+    <input type="text" name="text1" size="20"
+            maxlength="50" value="неактивное поле" disabled>
+
+    <input type="text" name="text1" size="20"
+            maxlength="50" value="только для чтения" readonly>
+            
+   </form>
+        
+3.
+ <form name="forma4534511">
+
+    Введите пароль:<br>
+    <input type="password" name="text1" size="20"
+            maxlength="50">
+
+   </form>
+4.
+<form name="forma2342341">
+
+  Какими языками вы владеете:<br>
+  
+  <input type="checkbox" name="lan1" value="english"
+                                  checked>английский
+  <input type="checkbox" name="lan2" value="german">
+                                            немецкий
+  <input type="checkbox" name="lan3" value="spanish">
+                                           испанский
+  <input type="checkbox" name="lan4" value="french">
+                                         французский
+</form>
+5.
+<form name="forma1">
+
+  Укажите ваш пол:<br>
+
+  <input type="radio" name="sex" value="man"
+                                  checked>мужской
+  <input type="radio" name="sex" value="woman">
+                                          женский
+</form>
+6.
+<form name="forma143141">
+
+  <input type="submit" name="submit" value="Отправить">
+
+
+  <input type="reset" name="reset" value="Очистить">
+
+  <input type="button" name="button" value="Отправить">
+
+</form>
+7.
+<form name="forma2342341">
+
+  <button name="submit" type="submit">
+   <font size="4"> Отправить </font>
+  </button>
+
+</form>
+
+8.
+
+<form name="forma1234234234">
+
+  <input type="file" name="load" size="50">
+
+</form>
+
+9.
+<form name="forma1234234">
+
+  <textarea cols="20" rows="3" wrap="off"></textarea><br>
+  <textarea cols="35" rows="5" wrap="virtual"></textarea><br>
+  <textarea cols="50" rows="7" wrap="physical"></textarea>
+
+</form>
+
+10.
+<form name="forma12">
+
+  Какой язык вы хотите изучать:
+  <select name="language" size="1">
+  <option selected value="html">html
+  <option value="php">php
+  <option value="java">java
+  </select><br><br>
+
+  Какое время вы готовы на это потратить:<br>
+  <select name="time" size="3">
+  <option selected value="1">1 месяц
+  <option value="2">2 месяца
+  <option value="3">3 месяца
+  </select><br><br>
+
+  Какие дни недели для занятий вас устроят:<br>
+  (выбирайте с нажатой клавишей ctrl)<br>
+  <select name="day" size="7" multiple>
+  <option selected value="mon">понедельник
+  <option value="tue">вторник
+  <option value="wen">среда
+  <option selected value="thu">четверг
+  <option value="fri">пятница
+  <option value="sat">суббота
+  <option value="san">воскресенье
+  </select>
+
+</form>
+
+11.
+<form name="forma123">
+
+  Каталог сайтов:<br>
+
+  <select name="catalog" size="9">
+
+   <optgroup label="Компьютеры">
+    <option value="1">интернет</option>
+    <option value="2">мобильники</option>
+    <option value="3">hardware</option>
+   </optgroup>
+
+   <optgroup label="Работа">
+    <option value="4">вакансии</option>
+    <option value="5">трудоустройство</option>
+    <option value="6">резюме</option>
+   </optgroup>
+
+   <optgroup label="Дом">
+    <option value="7">здоровье</option>
+    <option value="8">красота</option>
+    <option value="9">дети</option>
+   </optgroup>
+
+  </select>
+
+</form>
+
+12.
+<form name="forma14354151">
+
+  <label for="load">Выбирайте файл: </label>
+  <input type="file" name="load" size="30">
+
+</form>
+
+13.
+<form name="forma1234235352">
+    
+ <table  border="0" cellspacing="5" cellpadding="5">
+
+   <caption>Форма регистрации</caption>
+
+   <tr>
+    <td align="right" valign="top">Имя</td>
+    <td><input type="text" name="name" size="25"></td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top">e-mail</td>
+    <td><input type="text" name="e-mail" size="25"></td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top" >Пароль</td>
+    <td>
+     <input type="password" name="password" size="25">
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top" >Повтор пароля</td>
+    <td>
+     <input type="password" name="password2" size="25">
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top" >Пол</td>
+    <td>
+      <input type="radio" name="sex" value="man" checked>
+      мужской
+      <input type="radio" name="sex" value="woman">
+      женский
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top">Увлечения</td>
+    <td><select name="hobby" size="7" multiple>
+                <option selected value="1">компьютеры
+                <option value="2">спорт
+                <option value="3">игры
+                <option value="4">животные
+                <option value="5">автомобили
+                <option value="6">клубы
+                <option value="7">музыка
+        </select>
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" valign="top">Ваши пожелания</td>
+    <td>
+     <textarea cols="30" rows="3" wrap="physical">
+     </textarea>
+    </td>
+   </tr>
+
+   <tr>
+    <td align="right" colspan="2">
+     <input type="submit" name="submit" value="Отправить">
+     <input type="reset" name="reset" value="Очистить">
+    </td>
+   </tr>
+
+ </table>
+
+</form>
+</form>
+</body>
+</html>
