@@ -28,9 +28,10 @@
 <div class="ui sidebar inverted vertical menu" id="sidebar">
     {% for x in data2 %}
           <a href="/lesson/{{ x[0] }}" class="item">
-            Урок № {{ x[0] }}. {{ x[2] }}
+            Урок № {{ x[0] }}. {{ x[2].replace("#", "") }}
           </a>
     {% endfor %}
+    
 </div>
 <div class="ui fixed-height inverted stackable menu main" id="navbar" style="margin: 0;">
         <div class="ui container">
@@ -43,8 +44,8 @@
                 <a class="item" href="{{ url_for('lessons') }}">Уроки</a>
                 <div class="ui dropdown item" tabindex="0">
                     <span><a href="{{ url_for('support') }}">Помощь</a></span>
-                <div class="menu" tabindex="-1">
-                </div>
+                    <div class="menu" tabindex="-1">
+                    </div>
                 </div>          
                 <!-- <i class="red heart icon"> -->
             </div>
